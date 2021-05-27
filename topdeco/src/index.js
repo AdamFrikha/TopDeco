@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import GlobalFonts from './fonts/fonts';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <GlobalFonts/>
   </React.StrictMode>,
   document.getElementById('root')
 );
