@@ -6,6 +6,7 @@ import GlobalFonts from './fonts/fonts';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
+import Client from './pages/Client';
 
 
 function App() {

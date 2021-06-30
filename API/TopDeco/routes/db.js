@@ -1,23 +1,23 @@
 const mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "a_frikha",
-  password: "root",
-  database: "txorpi"
+    host: "localhost",
+    user: "valoon",
+    password: "root",
+    database: "top_deco"
 });
 
 /* Connect to sql */
 con.connect(error => {
-  if (error) throw error;
-  console.log("Successfully connected to the database.");
+    if (error) throw error;
+    console.log("Successfully connected to the database.");
 });
 
 let my_db = {};
 
 my_db.all = () => {
     return new Promise ((resolve, reject) => {
-        con.query('SELECT * FROM ad_infos', (err, results) => {
+        con.query('SELECT * FROM client', (err, results) => {
             if (err) {
                 return reject(err);
             }
@@ -26,9 +26,9 @@ my_db.all = () => {
     });
 };
 
-my_db.specific = (request, values) => {
+my_db.specific = (request) => {
     return new Promise ((resolve, reject) => {
-        con.query(request, values, (err, results) => {
+        con.query(request, (err, results) => {
             if (err) {
                 return reject(err);
             }
